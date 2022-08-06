@@ -1,0 +1,52 @@
+/*Normalize*/
+::after,
+::before,
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+html{
+    font-size: 62.5%;
+}
+
+body{
+    display: grid;
+    height: 100vh;
+    grid-template-areas: 
+    " header"
+    " main"
+    " footer"
+    ;   
+
+    grid-template-rows: 200px auto 45px;
+    grid-template-columns: auto;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    color: $primary;
+}
+
+img{
+    width: 100;
+}
+
+@media (max-width:1060px) {
+    .menu{
+        flex-direction: row;
+        gap:5px;
+
+    }
+
+    .menu__link{
+        font-size: $text-small;
+    }
+    
+}
+

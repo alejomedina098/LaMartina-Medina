@@ -1,0 +1,33 @@
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--spacing-small);
+    background-image: url(./recursos/36779.jpg);
+    font-family: 'PT Sans Narrow', sans-serif ;   
+    
+}
+
+footer{
+    background-image: linear-gradient(rgb(207, 14, 14), black);
+}
+footer__flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-medimum);
+
+}
+
+.footer__texto{
+    font-size: var(--text-small);
+    
+}
+.footer__texto{
+    transition: 2s;
+}
+
+.footer__texto:hover{
+    background-color: black;
+    border-radius: 10px;
+}

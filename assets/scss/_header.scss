@@ -1,0 +1,57 @@
+/*header*/
+header{
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    background-image: url(/recursos/36779.jpg);
+    font-family: 'PT Sans Narrow', sans-serif ;   
+    
+    
+}
+header{
+    background-image: linear-gradient(black, rgb(207, 14, 14));
+}
+
+.header__img{
+    width: 50%;
+    height: 90%;
+    
+    
+}
+
+.menu{
+    display: flex;
+    gap: $spacing-small;
+    justify-content: center;
+    
+}
+
+.menu__link{
+    font-size: $text-medimum;
+    padding: $spacing-medimum;
+    transition: all 1s;
+    
+}
+
+
+
+.menu__titulo{
+    font-size: map-get($fuentes , text-small );
+    padding: $spacing-small;
+    
+    transition: all 1s;
+}
+
+
+
+.menu__link{
+    transition: 2s;
+}
+
+
+
+
+
+
+
+
