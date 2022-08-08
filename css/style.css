@@ -83,7 +83,7 @@ header{
 }
 
 .header__img{
-    width: 50%;
+    width: 90%;
     height: 90%;
     
     
@@ -103,9 +103,7 @@ header{
     
 }
 
-.menu__link:hover{
-    border-color: var(--text-base);
-}
+
 .menu__titulo{
     font-size: var(--text-xsmall);
     padding: var(--spacing-small);
@@ -113,36 +111,36 @@ header{
     transition: all 1s;
 }
 
-.menu__titulo:hover{
-    border-color: var(--text-base);
+
+
+.menu__link{
+    transition: 2s;
+}
+
+.menu__link:hover{
+    background-color: rgba(0, 0, 0, 0.384);
+    
+    border-radius: 30px;
+}
+
+.header__img:hover{
+    animation: movimiento 0.5s;
+    animation-iteration-count: infinite;
 }
 
 
 
+
+
+/*Fin del header*/
+
+
+/*Main*/
 main{
     grid-area: main;
     background-image: url(./recursos/carniceria1.jpg);
     background-size: cover;
 }
-
-
-
-footer{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: var(--spacing-small);
-    background-image: url(./recursos/36779.jpg);
-    font-family: 'PT Sans Narrow', sans-serif ;   
-    
-}
-
-footer{
-    background-image: linear-gradient(rgb(207, 14, 14), black);
-}
-
-
-
 
 .main__grid{
     display: grid;
@@ -153,19 +151,11 @@ footer{
     
 }
 
-
-
-
 .box{
     background-color: var(--secondary);
     font-family: var(--font-principal);
     color: var(--primary)
 }
-
-
-
-
-/*Fin del header*/
 
 .container{
     display: flex;
@@ -183,16 +173,14 @@ footer{
     display: flex;
     justify-content: center;
 }
-
 .box__img{
     max-width: 700px;
     width: 100%;
 }
 
-/*galeria main*/
 .fondo{
     grid-area: main;
-    background-image: url(./recursos/fondo.avif);
+    background-image: url(/recursos/3051.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -215,46 +203,7 @@ footer{
     
 }
 
-.footer__flexbox{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: var(--spacing-medimum);
 
-}
-
-.footer__texto{
-    font-size: var(--text-small);
-    
-}
-
-
-.menu__link{
-    transition: 2s;
-}
-
-.menu__link:hover{
-    background-color: black;
-    border-radius: 10px;
-}
-
-.footer__texto{
-    transition: 2s;
-}
-
-.footer__texto:hover{
-    background-color: black;
-    border-radius: 10px;
-}
-
-.header__logo:hover{
-    animation: movimiento 0.5s;
-    animation-iteration-count: infinite;
-}
-
-.formulario__poiscion{
-    margin-top: 20rem;
-}
 
 .descripcion{
     font-size: var(--text-large);
@@ -262,7 +211,7 @@ footer{
     font-family: var(--font-principal)
     
 }
-
+/*Formulario*/
 .form-register {
     width: 400px;
     background: #24303c;
@@ -319,15 +268,35 @@ footer{
     font-size: var(--text-xsmall);
 }
 
-
-
-.header__img:hover{
-    animation:movimiento 0.5s;
-    animation-iteration-count: infinite;
+/*footer*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: var(--spacing-small);
+    background-image: url(./recursos/36779.jpg);
+    font-family: 'PT Sans Narrow', sans-serif ;   
+    
+}
+footer{
+    background-image: linear-gradient(rgb(207, 14, 14), black);
 }
 
+.footer__flexbox{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: var(--spacing-medimum);
 
+}
 
+.footer__texto{
+    font-size: var(--text-small);
+    color: white;
+    
+}
+
+/*Keyframes*/
 @keyframes movimiento{
     0% {
         transform: translate(1px, 1px) rotate(0deg);
@@ -364,7 +333,16 @@ footer{
     }
 }
 
+/*Media queries*/
 @media (max-width:1060px) {
+    .header__img{
+        width: 90%;
+        height: 90%;
+        
+        
+    }
+    
+
     .menu{
         flex-direction: row;
         gap:5px;
@@ -378,6 +356,13 @@ footer{
 }
 
 @media (max-width:899px) {
+    .header__img{
+        width: 90%;
+        height: 90%;
+        
+        
+    }
+    
     .menu{
         
         flex-direction: column;
@@ -386,12 +371,24 @@ footer{
         }
 
         .menu__link{
-            font-size: var(--text-xsmall);
+            font-size: var(--text-small);
             height: 25px;
+            animation: none;
         }
+    
+
+    
+
 }
 
 @media screen and (max-width:789px){
+    .header__img{
+        width: 90%;
+        height: 90%;
+        
+        
+    }
+    
     .menu{
         
         flex-direction: column;
@@ -401,6 +398,7 @@ footer{
 
         .menu__link{
             font-size:var(--text-small);
-            height: 25px;
+            
         }
+        
 }
