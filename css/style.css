@@ -1,5 +1,9 @@
 
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&family=DynaPuff:wght@500&family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alumni+Sans+Pinstripe&family=Dancing+Script&family=DynaPuff:wght@500&family=Open+Sans&display=swap');
+
 
 
 :root{
@@ -16,6 +20,7 @@
 
     /*font-family*/
     --font-principal:'PT Sans Narrow';
+    --font-secundaria:'Dancing Script';
 
     /*font-sizes*/
     --text-large:10rem;
@@ -62,6 +67,7 @@ ul{
 a{
     text-decoration: none;
     color: var(--primary)
+    
 }
 
 img{
@@ -74,17 +80,19 @@ header{
     justify-content:center;
     align-items: center;
     background-image: url(./recursos/36779.jpg);
-    font-family: 'PT Sans Narrow', sans-serif ;   
+    font-family: 'Alumni Sans Pinstripe', sans-serif;  
     
     
 }
 header{
-    background-image: linear-gradient(black, rgb(207, 14, 14));
+    background-image: linear-gradient(red, black);
 }
 
 .header__img{
-    width: 90%;
-    height: 90%;
+    
+    font-size: var(--spacing-small);
+    width: 100px;
+    height: 100px;
     
     
 }
@@ -93,13 +101,18 @@ header{
     display: flex;
     gap: var(--spacing-small);
     justify-content: center;
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
     
 }
 
 .menu__link{
     font-size: var(--text-medimum);
     padding:var(--spacing-medimum);
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
+    font-weight: bold;
     transition: all 1s;
+    
+    border-bottom: black;
     
 }
 
@@ -114,13 +127,12 @@ header{
 
 
 .menu__link{
-    transition: 2s;
+    transition: 4s;
 }
 
 .menu__link:hover{
-    background-color: rgba(0, 0, 0, 0.384);
+    background-color: rgba(0, 0, 0, 0.486);
     
-    border-radius: 30px;
 }
 
 .header__img:hover{
@@ -158,14 +170,14 @@ main{
 }
 
 .container{
+    background-image: url(/recursos/carniceria1.jpg);
+    background-position: center;
+    background-size: cover;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
-    
     gap: 30px;
-    background-image: url(/recursos/carniceria1.jpg);
     background-size: cover;
 }
 
@@ -180,7 +192,7 @@ main{
 
 .fondo{
     grid-area: main;
-    background-image: url(/recursos/3051.jpg);
+    background-image: url(/recursos/cielo-estrellado-negro-768x512.webp);
     background-repeat: no-repeat;
     background-size: cover;
     
@@ -192,7 +204,7 @@ main{
     text-align: center;
     font-size: medium;
     font-family: 'PT Sans Narrow', sans-serif;
-    color: white;
+    
 }
 
 
@@ -273,13 +285,15 @@ footer{
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding: var(--spacing-small);
+    padding: var(--spacing-medimum);
     background-image: url(./recursos/36779.jpg);
-    font-family: 'PT Sans Narrow', sans-serif ;   
+    font-family: 'PT Sans Narrow', sans-serif ;
+    font-weight: bold;   
+    
     
 }
 footer{
-    background-image: linear-gradient(rgb(207, 14, 14), black);
+    background-image: linear-gradient(black,red);
 }
 
 .footer__flexbox{
@@ -287,11 +301,13 @@ footer{
     justify-content: center;
     align-items: center;
     padding: var(--spacing-medimum);
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
 
 }
 
 .footer__texto{
     font-size: var(--text-small);
+    font-family: 'Alumni Sans Pinstripe', sans-serif;
     color: white;
     
 }
@@ -334,18 +350,13 @@ footer{
 }
 
 /*Media queries*/
-@media (max-width:1060px) {
-    .header__img{
-        width: 90%;
-        height: 90%;
-        
-        
-    }
-    
+@media (max-width:1260px) {
 
+    
+    
     .menu{
         flex-direction: row;
-        gap:5px;
+        gap:2px;
 
     }
 
@@ -355,25 +366,30 @@ footer{
     
 }
 
-@media (max-width:899px) {
+@media (max-width:1005px) {
+
     .header__img{
-        width: 90%;
-        height: 90%;
-        
-        
+        height: 100px;
+        width: 100px;
     }
     
     .menu{
         
-        flex-direction: column;
+        flex-direction: row;
         gap: 5px;
         
         }
 
         .menu__link{
-            font-size: var(--text-small);
+            font-size: 30px;
             height: 25px;
             animation: none;
+        }
+
+        .menu__link:hover{
+            background-color: rgba(0, 0, 0, 0);
+    
+            border-radius: 1000px;
         }
     
 
@@ -381,24 +397,48 @@ footer{
 
 }
 
-@media screen and (max-width:789px){
+@media screen and (max-width:934px){
     .header__img{
-        width: 90%;
-        height: 90%;
-        
-        
+        height: 100px;
+        width: 100px;
     }
     
     .menu{
         
-        flex-direction: column;
-        gap: 5px;
+        flex-direction: row;
+        gap: 2px;
         
         }
 
         .menu__link{
-            font-size:var(--text-small);
+            font-size:23px;
             
         }
         
 }
+@media screen and (max-width:789px){
+    .header__img{
+        height: 100px;
+        width: 100px;
+    }
+    
+    .menu{
+        
+        flex-direction: column;
+        gap: 10px;
+        
+        }
+
+        .menu__link{
+            font-size: 37px;
+            
+            
+            
+        }
+        
+}
+
+
+
+
+
